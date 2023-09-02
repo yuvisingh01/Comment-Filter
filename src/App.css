@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App container */
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* Left panel */
+.left-panel {
+  flex: 1;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 500px; /* Set max height and enable vertical scroll */
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+  background-color: #f5f5f5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-panel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.left-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-panel li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #d1ecf1; /* Light blue background */
+  border: 1px solid #b5d8e1; /* Light blue border */
+  border-radius: 4px;
+}
+
+.left-panel li.selected {
+  background-color: #002041; /* Blue background for selected item */
+  color: #fff;
+  border-color: #0056b3; /* Darker blue border for selected item */
+}
+
+/* Right panel */
+.right-panel {
+  flex: 2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 500px; /* Set max height and enable vertical scroll */
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+  background-color: #fff;
+}
+
+.right-panel h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.right-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-panel li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff3e6; /* Light orange background */
+  border: 1px solid #ffcc99; /* Light orange border */
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px); /* Adjust the width minus padding and borders */
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/* Styling for scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
